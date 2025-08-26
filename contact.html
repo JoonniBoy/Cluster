@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Contacto - Clustere</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="assets/css/style.css" rel="stylesheet">
+</head>
+<body class="min-h-screen flex flex-col">
+    <div class="relative flex-grow">
+        <header class="bg-white/80 backdrop-blur-sm sticky top-0 z-20 py-6 px-4 sm:px-6 lg:px-8 shadow-sm">
+            <div class="container mx-auto flex justify-between items-center">
+                <a href="index.html" class="flex items-center gap-3">
+                    <svg class="h-8 w-8 text-[var(--accent-color)]" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill-rule="evenodd"></path></svg>
+                    <h1 class="text-2xl font-bold text-[var(--text-near-black)]">Clustere</h1>
+                </a>
+                <nav class="hidden md:flex items-center gap-8">
+                    <a href="about.html" class="text-base font-medium text-[var(--text-near-black)] transition-colors duration-300 hover:text-[var(--accent-color)]">Sobre Nosotros</a>
+                    <a href="portfolio.html" class="text-base font-medium text-[var(--text-near-black)] transition-colors duration-300 hover:text-[var(--accent-color)]">Portafolio</a>
+                    <a href="contact.html" class="text-base font-medium text-[var(--text-near-black)] transition-colors duration-300 hover:text-[var(--accent-color)]">Contacto</a>
+                </nav>
+                <div class="hidden md:block">
+                    <a href="contact.html" class="bg-[var(--accent-color)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 shadow-md">Empezar</a>
+                </div>
+                <button id="hamburger-btn" class="md:hidden text-[var(--text-near-black)] z-30 hamburger">
+                    <span class="bar block w-6 h-0.5 bg-current my-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-current my-1 transition-all duration-300"></span>
+                    <span class="bar block w-6 h-0.5 bg-current my-1 transition-all duration-300"></span>
+                </button>
+            </div>
+        </header>
+
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-[var(--bg-off-white)] z-10 flex flex-col items-center justify-center gap-8">
+             <a href="about.html" class="text-2xl font-bold text-[var(--text-near-black)]">Sobre Nosotros</a>
+             <a href="portfolio.html" class="text-2xl font-bold text-[var(--text-near-black)]">Portafolio</a>
+             <a href="contact.html" class="text-2xl font-bold text-[var(--text-near-black)]">Contacto</a>
+        </div>
+
+        <main class="container mx-auto py-16 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-4xl mx-auto text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-black text-[var(--text-near-black)] mb-4">Hablemos</h2>
+                <p class="text-lg text-[var(--secondary-steel-gray)]">
+                    ¿Tienes un proyecto en mente? Nos encantaría escucharlo. Rellena el formulario y nos pondremos en contacto contigo.
+                </p>
+            </div>
+            
+            <div class="max-w-xl mx-auto bg-white p-8 rounded-lg shadow-md">
+                <form action="#" method="POST" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-[var(--secondary-steel-gray)]">Nombre</label>
+                        <input type="text" name="name" id="name" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--accent-color)] focus:border-[var(--accent-color)]">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-[var(--secondary-steel-gray)]">Correo Electrónico</label>
+                        <input type="email" name="email" id="email" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--accent-color)] focus:border-[var(--accent-color)]">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-[var(--secondary-steel-gray)]">Mensaje</label>
+                        <textarea name="message" id="message" rows="4" required class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-[var(--accent-color)] focus:border-[var(--accent-color)]"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full bg-[var(--accent-color)] text-white font-bold py-3 px-6 rounded-lg transition-transform duration-300 hover:scale-105 shadow-md">
+                            Enviar Mensaje
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-[var(--bg-off-white)] py-6 px-4 sm:px-6 lg:px-8 border-t border-[var(--secondary-steel-gray)] border-opacity-20">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+            <p class="text-sm text-[var(--secondary-steel-gray)]">© 2025 Clustere. Todos los derechos reservados.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="privacy.html" class="text-sm text-[var(--secondary-steel-gray)] hover:text-[var(--accent-color)] transition-colors">Política de Privacidad</a>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>
