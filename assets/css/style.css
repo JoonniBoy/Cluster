@@ -1,0 +1,40 @@
+/* css/styles.css */
+
+/* --- Variables de Color --- */
+:root {
+    --bg-off-white: #F8F9FA;
+    --text-near-black: #212529;
+    --secondary-steel-gray: #6C757D;
+    --accent-color: #8DA6C7;
+}
+
+/* --- Estilos base del cuerpo --- */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-off-white);
+    color: var(--text-near-black);
+}
+
+/* --- Clases de Botones Personalizadas (reemplazando @apply) --- */
+/* Las clases se aplican directamente en el HTML, pero puedes agregar estilos adicionales aquí si es necesario */
+
+/* --- Estilos para el Menú Móvil --- */
+/* Animación para el botón de hamburguesa (transformación a 'X') */
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Estilo de la tarjeta del portafolio */
+.portfolio-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.portfolio-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
